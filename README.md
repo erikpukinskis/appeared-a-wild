@@ -1,12 +1,14 @@
 Modules register singleton generators
 
 ```javascript
+var WebSite = require("web-site")
 var site = new WebSite()
 withNearbyModules.aModuleAppeared(
   "web-site",
   function() { return site }
 )
 
+var releaseChecklist = require("release-checklist")
 var list = releaseChecklist.get("test")
 withNearbyModules.aModuleAppeared(
   "release-checklist",
