@@ -1,0 +1,10 @@
+{
+  "name": "with-nearby-modules",
+  "version": "0.0.0",
+  "description": "Offer data to other modules who might want it",
+  "main": "with-nearby-modules.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erikpukinskis/with-nearby-modules.git"
+  }
+}
