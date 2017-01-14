@@ -8,7 +8,7 @@ function generator() {
   var dependencies = []
 
   function withNearbyModules(moduleNames, callback) {
-    console.log("a callback is waiting on "+moduleNames.join(", "))
+    console.log(":: TADA a callback is waiting on "+moduleNames.join(", "))
     var i = callbacks.length
     callbacks.push(callback)
     dependencies.push(moduleNames)
@@ -36,7 +36,7 @@ function generator() {
       throw new Error("withNearbyModules.aModuleAppeared needs a name and a function that returns singletons. For the module "+stringify(name)+" you provided "+stringify(singletonGenerator)+" for the function")
     }
 
-    console.log("A WILD MODULE APPEARED! "+name+"! Generator is "+stringify(singletonGenerator))
+    console.log(":: A WILD MODULE APPEARED! "+name+"! Generator is "+stringify(singletonGenerator))
 
     singletons[name] = singletonGenerator
 
@@ -60,7 +60,6 @@ function generator() {
         if (!singletonGenerator) {
           console.log("checking for "+dep+" -> NOPE aborting.")
           console.log("keys on singletons include "+Object.keys(singletons))
-          console.log("global store is", globalStore.id)
           return
         }
         console.log("checking for "+dep+" X")
