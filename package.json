@@ -1,6 +1,6 @@
 {
   "name": "with-nearby-modules",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Offer data to other modules who might want it",
   "main": "with-nearby-modules.js",
   "repository": {
