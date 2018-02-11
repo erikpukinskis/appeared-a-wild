@@ -5,9 +5,9 @@ For example, if you have a "WebSite" module, which you instantiate by calling `v
 ```javascript
 appearedAWild(
   ["release-checklist", "web-site"],
-  function(list, site) {
+  function buildSite(list, site) {
     site.addRoute("get", "/housing-bond", function(request, response) {
-      renderBond(list, response)
+      renderList(list, response)
     })
   }
 )
@@ -30,6 +30,8 @@ appearedAWild.module(
   function() { return list }
 )
 ```
+
+At that point, `buildSite` will get called with `site` and `list`.
 
 ### Why
 
