@@ -7,7 +7,7 @@ function generator() {
   var callbacks = []
   var dependencies = []
 
-  function withNearbyModules(moduleNames, callback) {
+  function appearedAWild(moduleNames, callback) {
     console.log(":: TADA a callback is waiting on "+moduleNames.join(", "))
     var i = callbacks.length
     callbacks.push(callback)
@@ -30,10 +30,10 @@ function generator() {
     }
   }
 
-  function aModuleAppeared(name, singletonGenerator) {
+  function aWildModuleAppeared(name, singletonGenerator) {
 
     if (typeof singletonGenerator != "function") {
-      throw new Error("withNearbyModules.aModuleAppeared needs a name and a function that returns singletons. For the module "+stringify(name)+" you provided "+stringify(singletonGenerator)+" for the function")
+      throw new Error("appearedAWild.aWildModuleAppeared needs a name and a function that returns singletons. For the module "+stringify(name)+" you provided "+stringify(singletonGenerator)+" for the function")
     }
 
     console.log(":: A WILD MODULE APPEARED! "+name+"! Generator is "+stringify(singletonGenerator))
@@ -73,7 +73,7 @@ function generator() {
 
   }
 
-  withNearbyModules.aModuleAppeared = aModuleAppeared
+  appearedAWild.module = aWildModuleAppeared
 
-  return withNearbyModules
+  return appearedAWild
 }

@@ -1,10 +1,10 @@
 {
-  "name": "with-nearby-modules",
-  "version": "0.2.0",
-  "description": "Offer data to other modules who might want it",
-  "main": "with-nearby-modules.js",
+  "name": "appeared-a-wild",
+  "version": "0.3.0",
+  "description": "Define code that should run when instances of various other modules appear",
+  "main": "appeared-a-wild.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/erikpukinskis/with-nearby-modules.git"
+    "url": "https://github.com/erikpukinskis/appeared-a-wild.git"
   }
 }

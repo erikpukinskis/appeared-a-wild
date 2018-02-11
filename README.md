@@ -3,14 +3,14 @@ Modules register singleton generators
 ```javascript
 var WebSite = require("web-site")
 var site = new WebSite()
-withNearbyModules.aModuleAppeared(
+appearedAWild.module(
   "web-site",
   function() { return site }
 )
 
 var releaseChecklist = require("release-checklist")
 var list = releaseChecklist.get("test")
-withNearbyModules.aModuleAppeared(
+appearedAWild.module(
   "release-checklist",
   function() { return list }
 )
@@ -19,7 +19,7 @@ withNearbyModules.aModuleAppeared(
 and then other modules can register callbacks to be called when certain singletons are available.
 
 ```javascript
-withNearbyModules(
+appearedAWild(
   ["release-checklist", "web-site"],
   function(list, site) {
     site.addRoute("get", "/housing-bond", function(request, response) {
