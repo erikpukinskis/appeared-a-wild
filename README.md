@@ -1,4 +1,7 @@
-Modules register singleton generators
+With **appeared-a-wild** you can register handlers for whatever _instanes_ some specified module might throw at you.
+
+For example, if you have a "WebSite" module, which you instantiate by calling `var site = new WebSite` then **appeared-a-wild** will let you sort of register to be notified when one of those appears.
+
 
 ```javascript
 var WebSite = require("web-site")
@@ -16,7 +19,7 @@ appearedAWild.module(
 )
 ```
 
-and then other modules can register callbacks to be called when certain singletons are available.
+and then other modules can register callbacks to be called when those instances are available.
 
 ```javascript
 appearedAWild(
