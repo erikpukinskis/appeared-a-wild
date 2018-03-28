@@ -1,6 +1,6 @@
 {
   "name": "appeared-a-wild",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Define code that should run when instances of various other modules appear",
   "main": "appeared-a-wild.js",
   "repository": {
