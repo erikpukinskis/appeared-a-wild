@@ -8,6 +8,9 @@ function generator() {
   var dependencies = []
 
   function appearedAWild(moduleNames, callback) {
+    if (typeof moduleNames == "string") {
+      moduleNames = [moduleNames]
+    }
     console.log(":: TADA a callback is waiting on "+moduleNames.join(", "))
     var i = callbacks.length
     callbacks.push(callback)
